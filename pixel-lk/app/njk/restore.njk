@@ -1,0 +1,49 @@
+{% set title = "Восстановление пароля " %}
+{% include "./app/njk/parts/header.njk" %}
+
+<section>
+	<div class="container">
+		<h1 class="title-page">
+			Восстановление пароля
+		</h1>
+		<p>Если вы забыли пароль, введите логин или E-Mail.</p>
+		<p>Контрольная строка для смены пароля, а также ваши регистрационные данные, будут высланы вам по E-Mail.</p>
+		<hr>
+	</div>
+
+</section>
+<section>
+	<div class="container">
+		<form action="" class="margin-bottom">
+			<div class="form-auth">
+				<div class="alert alert-success">
+					Контрольная строка, а также ваши регистрационные данные были высланы на email. Пожалуйста, дождитесь письма, так как контрольная строка изменяется при каждом запросе.
+				</div>
+				<label class="label-field">
+					<span>Логин:</span>
+					<input type="text" class="input">
+				</label>
+				<p><strong>ИЛИ</strong></p>
+				<label class="label-field">
+					<span>E-mail:</span>
+					<input type="email" class="input">
+				</label>
+				
+				<div class="row gap-middle align-center">
+					<button class="btn">
+						Выслать инструкции
+					</button>
+				</div>
+			</div>
+		</form>
+
+		<p>Если у вас возникли проблемы с восстановлением доступа к вашему личному кабинету, вы можете обратиться <br/>
+			за помощью к вашему личному менеджеру или позвонить по телефону: <a class="color-red" href="tel:+7 (499) 346-21-31">+7 (499) 346-21-31</a> или отправить <br/>
+			письмо по адресу: <a class="color-red" href="mailto:manager@pixelplus.ru">manager@pixelplus.ru</a>.</p>
+		<p><a class="text-small" href="#">Вернуться на страницу авторизации</a></p>
+		<hr>
+	</div>
+
+</section>
+
+{% include "./app/njk/parts/footer.njk" %}

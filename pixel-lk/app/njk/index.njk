@@ -1,0 +1,34 @@
+{% set title = "Авторизация ЛК DEV" %}
+{% include "./app/njk/parts/header.njk" %}
+
+<section>
+	<div class="container">
+		<div class="logo text-center margin-bottom-big">
+			<img src="./assets/img/logo.svg" alt="">
+		</div>
+		<h1 class="title-page text-center">
+			Поиск проекта 
+		</h1>
+
+		<label class="search-field">
+			<svg><use xlink:href="#search"></use></svg> 
+			<input type="text" placeholder="pixelplus.ru" class="text-center">
+		</label>
+
+		<ul class="search-results">
+			<li><a href="#">pixelplus.ru</a></li>
+			<li><a href="#">pixelplus.ru</a></li>
+			<li><a href="#">pixelplus.ru</a></li>
+			<li><a href="#">pixelplus.ru</a></li>
+		</ul>
+	</div>
+
+</section>
+
+
+{# {% for i in range(1, 6) %}
+	{% include "./app/njk/layout/site-line.njk" %}
+{% endfor %} #}
+
+
+{% include "./app/njk/parts/footer.njk" %}

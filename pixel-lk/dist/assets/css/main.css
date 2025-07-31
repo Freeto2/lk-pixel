@@ -1,0 +1,697 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+:root {
+  --font: "Ubuntu", sans-serif;
+  --red: #AA0511;
+}
+
+header, footer {
+  background: #333333;
+  color: #fff;
+  padding: 15px 0;
+}
+
+body {
+  background-color: #fff;
+  font-family: var(--font);
+  font-size: 16px;
+  font-weight: 400;
+  color: #333333;
+  line-height: 1.3;
+}
+@media screen and (max-width: 1200px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+a {
+  color: #333;
+  transition: 0.3s;
+  text-decoration: none;
+}
+a:hover {
+  color: var(--red);
+}
+
+section {
+  padding: 40px 0;
+}
+section + section {
+  padding-top: 0;
+}
+
+strong {
+  font-weight: bold;
+}
+
+p {
+  margin-bottom: 20px;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+
+input, textarea, button, select {
+  font-family: var(--font);
+}
+
+img {
+  max-width: 100%;
+}
+
+.page-inner {
+  position: relative;
+  min-height: var(--app-height);
+  display: flex;
+  flex-flow: column;
+}
+.page-inner main {
+  flex-grow: 1;
+}
+
+.title-page {
+  font-size: 40px;
+  margin-bottom: 25px;
+}
+@media screen and (max-width: 991px) {
+  .title-page {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .title-page {
+    font-size: 20px;
+  }
+}
+
+.title-block {
+  font-size: 32px;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 991px) {
+  .title-block {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .title-block {
+    font-size: 16px;
+  }
+}
+
+.margin-bottom {
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 575px) {
+  .margin-bottom {
+    margin-bottom: 15px;
+  }
+}
+.margin-bottom-big {
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 575px) {
+  .margin-bottom-big {
+    margin-bottom: 30px;
+  }
+}
+
+.color-red {
+  color: var(--red);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-small {
+  font-size: 14px;
+}
+
+hr {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 1px;
+  background: #D4D4D4;
+  border: none;
+}
+hr:last-child {
+  margin-top: 40px;
+}
+
+.input {
+  border-radius: 5px;
+  border: 1px solid #D4D4D4;
+  background: #FFF;
+  padding: 10px 12px;
+  width: 100%;
+}
+
+.label-field {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.label-field__content {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  row-gap: 10px;
+  flex-flow: wrap;
+}
+.label-field:last-child {
+  margin-bottom: 0;
+}
+.label-field span {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+.label-field-row {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  row-gap: 10px;
+}
+@media screen and (max-width: 991px) {
+  .label-field-row {
+    flex-flow: wrap;
+  }
+}
+.label-field-row span {
+  margin-bottom: 0;
+}
+.label-field em {
+  color: var(--red);
+  transform: translateY(-5px);
+  position: relative;
+  display: inline-block;
+}
+
+.form-auth {
+  max-width: 340px;
+}
+
+.label-password {
+  position: relative;
+}
+.label-password [type=password] ~ .btn-toggle-pass svg:nth-child(2),
+.label-password [type=text] ~ .btn-toggle-pass svg:first-child {
+  display: none;
+}
+.label-password .btn-toggle-pass {
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: none;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.label-password .btn-toggle-pass svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--red);
+}
+
+.row {
+  display: flex;
+  flex-flow: wrap;
+}
+
+.gap-middle {
+  gap: 24px;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.btn {
+  padding: 11px 17px;
+  font-family: var(--font);
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 5px;
+  background: var(--red);
+  border: none;
+  color: #fff;
+  transition: 0.2s;
+}
+.btn:hover {
+  background: #800000;
+}
+
+.additional-links {
+  display: flex;
+  flex-flow: wrap;
+  gap: 24px;
+}
+@media screen and (max-width: 991px) {
+  .additional-links {
+    gap: 10px;
+  }
+}
+.additional-links__item {
+  padding: 23px 20px;
+  border: 1px solid #D4D4D4;
+  border-radius: 5px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 10px;
+  min-width: 213px;
+  position: relative;
+}
+@media screen and (max-width: 991px) {
+  .additional-links__item {
+    width: calc(50% - 5px);
+    text-align: center;
+    min-width: auto;
+    box-sizing: border-box;
+    font-size: 13px;
+    padding: 15px 10px;
+  }
+}
+.additional-links__item a {
+  color: #757575;
+  text-decoration: underline;
+}
+.additional-links__item a:hover {
+  color: var(--red);
+}
+.additional-links__item a::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+}
+
+.alert {
+  padding: 15px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #7B1C14;
+  background: #F3D8DA;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.alert:last-child {
+  margin-bottom: 0;
+}
+.alert.alert-success {
+  color: #315B41;
+  background: #E1F2E3;
+}
+
+.search-field {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  margin-bottom: 25px;
+  position: relative;
+}
+.search-field input {
+  padding: 5px 20px;
+  width: 100%;
+  font-size: 30px;
+  border: none;
+  border-bottom: 1px solid #DCDCDC;
+}
+@media screen and (max-width: 991px) {
+  .search-field input {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .search-field input {
+    font-size: 20px;
+  }
+}
+.search-field ::placeholder {
+  color: #DCDCDC;
+  opacity: 1;
+  font-weight: 400;
+}
+.search-field svg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 30px;
+  height: 30px;
+  bottom: 5px;
+}
+
+.search-results li {
+  margin-bottom: 15px;
+}
+.search-results li:last-child {
+  margin-bottom: 0;
+}
+.search-results a {
+  font-size: 30px;
+  font-style: normal;
+  text-align: center;
+  display: block;
+}
+@media screen and (max-width: 991px) {
+  .search-results a {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .search-results a {
+    font-size: 20px;
+  }
+}
+
+.label-select {
+  position: relative;
+}
+@media screen and (max-width: 575px) {
+  .label-select {
+    width: 100%;
+  }
+}
+.label-select svg {
+  position: absolute;
+  bottom: 0;
+  right: 12px;
+  top: 0;
+  margin: auto;
+  width: 12px;
+  height: 7px;
+}
+.label-select select {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #D9d9d9;
+  border-radius: 4px;
+  background: #fff0;
+  font-family: var(--font);
+  appearance: none;
+}
+.label-select select option:disabled {
+  color: #d9d9d9;
+}
+
+.client-info {
+  margin-left: 23%;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 1500px) {
+  .client-info {
+    margin-left: 15%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .client-info {
+    margin-left: 0%;
+  }
+}
+.client-info .label-field-row span, .client-info .label-select span {
+  width: 200px;
+}
+@media screen and (max-width: 575px) {
+  .client-info .label-field-row span, .client-info .label-select span {
+    width: 100%;
+  }
+}
+.client-info .label-field-row input, .client-info .label-field-row select, .client-info .label-select input, .client-info .label-select select {
+  width: 300px;
+}
+@media screen and (max-width: 575px) {
+  .client-info .label-field-row input, .client-info .label-field-row select, .client-info .label-select input, .client-info .label-select select {
+    width: 100%;
+  }
+}
+.client-info .label-field-row input[type=checkbox], .client-info .label-select input[type=checkbox] {
+  width: 15px;
+}
+.client-info .input-check {
+  width: auto;
+}
+.client-info .input-check span {
+  width: auto;
+}
+.client-info ::placeholder {
+  color: #D9D9D9;
+  opacity: 1;
+}
+
+@media screen and (max-width: 1200px) {
+  .client-added-wrapper .text-center {
+    text-align: left;
+  }
+  .client-added-wrapper .alert {
+    margin-left: 0;
+    width: auto;
+    display: inline-block;
+    clear: both;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .added-client {
+    flex-flow: column;
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
+.file-upload-wrapper {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+@media screen and (max-width: 991px) {
+  .file-upload-wrapper {
+    flex-flow: wrap;
+  }
+}
+.file-upload-wrapper .file-name {
+  padding: 10px 12px;
+  border: 1px solid #D9D9D9;
+  border-radius: 4px;
+  color: #D9D9D9;
+  margin-bottom: 0;
+  width: 300px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+  overflow: hidden;
+}
+@media screen and (max-width: 575px) {
+  .file-upload-wrapper .file-name {
+    width: 100%;
+  }
+}
+.file-upload-wrapper p {
+  margin-bottom: 0;
+}
+
+.text-light {
+  color: #d9d9d9;
+}
+
+.input-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+}
+.input-check span {
+  margin-bottom: 0;
+}
+.input-check input {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 1px solid var(--red);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: 0.2s;
+}
+.input-check input::before {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg width='10px' height='10px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 12.6111L8.92308 17.5L20 6.5' stroke='%23ffffff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size: 12px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.input-check input:checked {
+  background: var(--red);
+}
+
+.width-1-4 {
+  width: 25%;
+}
+
+.margin-auto {
+  margin: auto;
+}
+
+[data-modal] {
+  cursor: pointer;
+}
+
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--app-height);
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: 0.3s;
+  z-index: 5;
+}
+.modal-wrapper.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+}
+.modal-wrapper__inner {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+  width: calc(100% - 30px);
+  max-width: 650px;
+}
+@media screen and (max-width: 768px) {
+  .modal-wrapper__inner {
+    padding: 15px;
+  }
+}
+.modal-wrapper .modal-title {
+  font-size: 25px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+@media screen and (max-width: 768px) {
+  .modal-wrapper .modal-title {
+    font-size: 20px;
+  }
+}
+.modal-wrapper .modal-head {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-flow: wrap-reverse;
+  row-gap: 10px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.modal-wrapper .close {
+  text-decoration: underline;
+  color: #858585;
+  font-size: 16px;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .modal-wrapper .close {
+    margin-left: auto;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+}
+.modal-wrapper .close:hover {
+  color: #000;
+}
+.modal-wrapper .input-check {
+  width: 100%;
+  display: flex;
+  margin-bottom: 12px;
+}
+.modal-wrapper .input-check:last-child {
+  margin-bottom: 0;
+}
+.modal-wrapper .input-check span {
+  font-weight: bold;
+}
+.modal-wrapper .btn-big {
+  font-size: 18px;
+  padding: 12px 40px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  margin-top: 50px;
+}
+@media screen and (max-width: 768px) {
+  .modal-wrapper .btn-big {
+    margin-top: 30px;
+  }
+}
+
+.loading-file {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  gap: 15px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.loading-file svg {
+  width: 17px;
+  height: 17px;
+}
+
+.file-upload-wrapper-loading {
+  display: block;
+}
+.file-upload-wrapper-loading .file-name {
+  border: none;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  color: #333;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.labels-row {
+  display: flex;
+  flex-flow: wrap;
+  gap: 24px;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+  .labels-row {
+    gap: 0;
+  }
+}
+.labels-row label {
+  width: calc(33.3333333333% - 16px);
+  margin-bottom: 0;
+}
+@media screen and (max-width: 768px) {
+  .labels-row label {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+/*# sourceMappingURL=main.css.map */

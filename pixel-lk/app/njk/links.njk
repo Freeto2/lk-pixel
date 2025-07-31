@@ -1,0 +1,33 @@
+{% set title = "Страницы" %}
+{% include "./app/njk/parts/header.njk" %}
+
+<section>
+	<div class="container">
+	
+		<h1 class="title-page margin-bottom">
+			Страницы
+		</h1>
+
+        <ul class="margin-bottom">
+            <li><a href="./index.html">Главная</a></li>
+            <li><a href="./auth.html">Авторизация</a></li>
+            <li><a href="./restore.html">Восстановление пароля</a></li>
+            <li><a href="./add-client.html">Добавить клиента</a></li>
+        </ul>
+
+        <h1 class="title-page margin-bottom">
+			Попап окна
+		</h1>
+
+        <ul>
+            <li><a data-modal="create">Создание счета безналичной оплаты</a></li>
+            <li><a data-modal="loading">Загрузить документы</a></li>
+        </ul>
+
+	</div>
+
+</section>
+
+
+
+{% include "./app/njk/parts/footer.njk" %}

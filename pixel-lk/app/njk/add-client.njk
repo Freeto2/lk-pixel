@@ -1,0 +1,213 @@
+{% set title = "Добавить клиента" %}
+{% include "./app/njk/parts/header.njk" %}
+
+<section class="client-added-wrapper">
+	<div class="container">
+		<h1 class="title-page text-center margin-bottom-big">
+			Добавить клиента 
+		</h1>
+
+		<p class="text-center margin-bottom">
+			Информация о проекте
+		</p>
+
+		<div class="client-info">
+			<label class="label-field label-field-row">
+				<span><em>*</em>Адрес сайта (без www)</span>
+				<input type="text" class="input" placeholder="Анна">
+			</label>
+			<label class="label-field label-field-row">
+				<span><em>*</em>Название компании</span>
+				<input type="text" class="input" placeholder="Компания «Пиксель Плюс»">
+			</label>
+			<label class="label-field label-field-row">
+				<span><em>*</em>Логотип компании</span>
+				<div class="file-upload-wrapper">
+					<p class="file-name">Файл не выбран</p>
+					<label class="custom-file-label btn">Обзор</label>
+					<p class="text-light text-small">Подсказка: Форматы файла: JPG, GIF, PNG. <br/>Не более 1 Мб.</p>
+					<input type="file" style="display: none;" />
+				</div>
+			</label>
+			<label class="label-field label-field-row">
+				<span><em>*</em>Система управления (CMS)</span>
+				<div class="label-select">
+					<select>
+						<option value="Выберите..." disabled selected>Выберите...</option>
+						<option value="Выберите...">Wordpress</option>
+						<option value="Выберите...">Joomla</option>
+						<option value="Выберите...">Bitrix</option>
+					</select>
+					<svg><use xlink:href="#arrow"></use></svg>
+				</div>
+			</label>
+		</div>
+		<p class="text-center margin-bottom">
+			Контактное лицо заказчика
+		</p>
+		<div class="client-info">
+			<label class="label-field label-field-row">
+				<span><em>*</em>Фамилия</span>
+				<input type="text" class="input" placeholder="Иванов">
+			</label>
+			<label class="label-field label-field-row">
+				<span><em>*</em>Имя</span>
+				<input type="text" class="input" placeholder="Иван">
+			</label>
+			<label class="label-field label-field-row">
+				<span>Отчество</span>
+				<input type="text" class="input" placeholder="Иванович">
+			</label>
+			<label class="label-field label-field-row">
+				<span><em>*</em>E-mail заказчика</span>
+				<input type="email" class="input" placeholder="maneger@pixelplu.ru">
+			</label>
+			<label class="label-field label-field-row">
+				<span><em>*</em>Моб.телефон</span>
+				<input type="text" class="input" placeholder="+79157328463">
+			</label>
+			<label class="label-field label-field-row">
+				<span>Стационарный телефон</span>
+				<input type="text" class="input" placeholder="+7495732846">
+			</label>
+			<label class="label-field label-field-row">
+				<span>Город</span>
+				<input type="text" class="input" placeholder="Москва">
+			</label>
+		</div>
+
+
+		<p class="text-center margin-bottom">
+			Продажа
+		</p>
+
+		<div class="client-info">
+			<label class="label-field label-field-row">
+				<span><em>*</em>Менеджер по продаже</span>
+				<div class="label-select">
+					<select>
+						<option value="Выберите..." disabled selected>Выберите...</option>
+						<option value="Выберите...">Дмитрий</option>
+						<option value="Выберите...">Олег</option>
+					</select>
+					<svg><use xlink:href="#arrow"></use></svg>
+				</div>
+			</label>
+			<label class="label-field label-field-row">
+				<span><em>*</em>Источник продажи</span>
+				<div class="label-select">
+					<select>
+						<option value="Выберите..." disabled selected>Выберите...</option>
+						<option value="Выберите...">Google</option>
+						<option value="Выберите...">Telegram</option>
+					</select>
+					<svg><use xlink:href="#arrow"></use></svg>
+				</div>
+			</label>
+			<div class="label-field label-field-row">
+				<span><em>*</em>Тестовый клиент</span>
+				<div class="label-field__content">
+					<label class="input-check">
+						<input type="checkbox">
+						<span>Нет</span>
+					</label>
+					<label class="input-check">
+						<input type="checkbox">
+						<span>Да</span>
+					</label>
+				</div>
+				
+			</div>
+		</div>
+
+		<p class="text-center margin-bottom">
+			Договор и реквизиты клиента
+		</p>
+		<div class="client-info">
+			<div class="label-field label-field-row">
+				<span><em>*</em>Тип договора</span>
+				<div class="label-field__content">
+					<label class="input-check">
+						<input type="checkbox">
+						<span>Указать договор</span>
+					</label>
+					<label class="input-check">
+						<input type="checkbox">
+						<span>Без договора</span>
+					</label>
+				</div>
+			</div>
+
+			<label class="label-field label-field-row">
+				<span><em>*</em>Номер и дата договора</span>
+				<input type="text" class="input" placeholder="№ ИС-220325 от 22 марта 2025 г.">
+			</label>
+			<label class="label-field label-field-row">
+				<span><em>*</em>ИНН</span>
+				<div class="label-field__content">
+					<input type="text" class="input" placeholder="695007232500">
+					<button class="btn">Заполнить по ИНН</button>
+				</div>
+			</label>
+			<label class="label-field label-field-row">
+				<span>Юридическое лицо</span>
+				<input type="text" class="input" placeholder="ООО «Пиксель Плюс» ">
+			</label>
+			<label class="label-field label-field-row">
+				<span>КПП</span>
+				<input type="text" class="input" placeholder="773501001">
+			</label>
+			<label class="label-field label-field-row">
+				<span><em>*</em>Юридический адрес</span>
+				<input type="text" class="input" placeholder="124498, город Москва, город Зеленоград">
+			</label>
+			<label class="label-field label-field-row">
+				<span><em>*</em>Почтовый адрес</span>
+				<div class="label-field__content">
+					<input type="text" class="input" placeholder="124498, город Москва, город Зеленоград">
+					<label class="input-check">
+						<input type="checkbox">
+						<span>Совпадает с юридическим</span>
+					</label>
+				</div>
+			</label>
+
+			<label class="label-field label-field-row">
+				<span><em>*</em>Обмен документами</span>
+				<div class="label-select">
+					<select>
+						<option value="Выберите..." disabled selected>Выберите...</option>
+						<option value="Выберите...">Google</option>
+						<option value="Выберите...">Telegram</option>
+					</select>
+					<svg><use xlink:href="#arrow"></use></svg>
+				</div>
+			</label>
+
+			<label class="label-field label-field-row">
+				<span><em>*</em>Юр. лицо (Пиксель)</span>
+				<div class="label-select">
+					<select>
+						<option value="Выберите..." disabled selected>Выберите...</option>
+						<option value="Выберите...">Google</option>
+						<option value="Выберите...">Telegram</option>
+					</select>
+					<svg><use xlink:href="#arrow"></use></svg>
+				</div>
+			</label>
+		</div>
+		<div class="text-center added-client">
+			<button class="btn margin-bottom">Добавить клиента</button>
+			<div class="alert width-1-4 margin-auto">Обязательные поля не заполнены</div>
+		</div>
+	</div>
+
+</section>
+
+
+{# {% for i in range(1, 6) %}
+	{% include "./app/njk/layout/site-line.njk" %}
+{% endfor %} #}
+
+
+{% include "./app/njk/parts/footer.njk" %}

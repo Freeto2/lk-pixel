@@ -1,0 +1,62 @@
+<div class="modal-wrapper" id="loading">
+    <div class="modal-wrapper__inner">
+        <div class="modal-head">
+            <div class="modal-title">
+                Загрузить документы
+            </div>
+            <div class="close">
+                Свернуть
+            </div>
+        </div>
+
+        <label class="label-field">
+            <span>Название </span>
+            <input type="text" class="input">
+        </label>
+
+        <div class="labels-row">
+
+            <label class="label-field">
+				<span>Документ основание*</span>
+				<div class="label-select">
+					<select>
+						<option value="Выберите..." disabled selected>Выберите...</option>
+						<option value="Выберите...">Договор</option>
+						<option value="Выберите...">Договор 2</option>
+					</select>
+					<svg><use xlink:href="#arrow"></use></svg>
+				</div>
+			</label>
+            <label class="label-field">
+                <input type="text" class="input" placeholder="ИС-">
+            </label>
+            <label class="label-field">
+                <input type="text" class="input" placeholder="Дата">
+            </label>
+        </div>
+        <div class="text-center">
+            <button class="btn">Применить</button>
+        </div>
+
+        <label class="label-field">
+            <span>Doc файл:</span>
+            <div class="file-upload-wrapper file-upload-wrapper-loading">
+                <label class="custom-file-label loading-file">
+                    <svg><use xlink:href="#loading-file"></use></svg>
+                    Загрузить документ в формате Doc
+                </label>
+                <p class="file-name">Файл не выбран</p>
+                
+                <input type="file" style="display: none;" />
+            </div>
+        </label>
+
+        <div class="text-center">
+            <button class="btn btn-big">
+                Сохранить
+            </button>
+        </div>
+
+    </div>
+    
+</div>
