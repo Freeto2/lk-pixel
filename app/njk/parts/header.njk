@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>{{title}}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="ProjectName — описание">
+	<link rel="stylesheet" href="./assets/css/grid.css">
+	<link rel="stylesheet" href="./assets/css/main.css"> 
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.min.css">
+  </head>
+  <body>
+    <div class="wrapper">
+		{% if page == 'auth' %}
+		<header class="header">
+			<div class="container">
+				<a href="./" class="logo">
+					<img src="https://lk.pixelplus.ru/local/templates/pixelplus.ru_2024/images/logo--white.svg" alt="">
+				</a>
+			</div>
+		</header>
+		{% else %}
+		<header class="header">
+			<div class="container">
+			<div class="header__inner">
+				<h1 class="header__title">
+				<a class="header__title-link" href="index.html"><span>Личный кабинет</span> – Компания «ЛСМБРОКЕР»
+				</a>
+				</h1>
+				<div class="header__controls">
+				<select class="header__project-select" data-slimselect>
+					<option value="lcmg_ru">lcmg.ru</option>
+					<option value="mail_ru">mail.ru</option>
+					<option value="figma_com">figma.com</option>
+				</select>
+				<ul class="header__control-list">
+					<li class="header__control-item">
+					<button class="btn btn--text-control" type="button"><span>Выйти</span>
+						<svg width="17" height="18" aria-hidden="true">
+							<use xlink:href="./assets/img/sprite.svg#icon-logout"></use>
+						</svg>
+					</button>
+					</li>
+				</ul>
+				</div>
+			</div>
+			</div>
+		</header>
+		{% endif %}
+		<main>
