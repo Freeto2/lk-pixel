@@ -708,6 +708,9 @@ hr:last-child {
 .client-info .label-field-row input[type=checkbox], .client-info .label-select input[type=checkbox] {
   width: 15px;
 }
+.client-info .label-field-row .input-check input, .client-info .label-select .input-check input {
+  width: 15px;
+}
 .client-info .input-check {
   width: auto;
 }
