@@ -1,8 +1,6 @@
 @import './_reset'
 @import './_grid'
 
-
-
 .page-inner
     position: relative
     min-height: var(--app-height)
@@ -37,10 +35,15 @@
         @media screen and ( max-width: 575px )
             margin-bottom: 30px
 
+    &-small
+        margin-bottom: 15px
+
 .color-red
     color: var(--red)
 .text-center
     text-align: center
+.text-right
+    text-align: right
 
 .text-small
     font-size: 14px
@@ -102,7 +105,7 @@ hr
     position: relative
     [type="password"] ~ .btn-toggle-pass svg:nth-child(2), 
     [type="text"] ~ .btn-toggle-pass svg:first-child
-        display: none
+    display: none
 
     .btn-toggle-pass
         padding: 0
@@ -497,7 +500,138 @@ hr
             width: 100%
             margin-bottom: 10px
 
-
 .logo
     img
         display: inline-block
+
+.results-wrapper
+    width: 100%
+    max-width: 690px
+    margin-left: auto
+    margin-right: auto
+
+.search-form, .result-item
+    padding: 30px
+    border: 1px solid #D4D4D4
+    border-radius: 4px
+    background: #fff
+
+    .title-block
+        margin-top: 0
+
+.toggle-search
+    color: var(--red)
+    text-transform: uppercase
+    font-size: 16px
+    background: none
+    border: none
+    margin-top: 15px
+    margin-left: auto
+    padding: 0
+
+.label-search
+    position: relative
+    display: flex
+    align-items: center
+    svg
+        width: 20px
+        height: 20px
+        color: #000
+        position: absolute
+        left: 16px
+        top: 16px
+
+    input
+        padding: 16px
+        padding-left: 45px
+
+.result-item
+    display: flex
+    flex-flow: column
+    margin-bottom: 16px
+    &__head
+        text-transform: uppercase
+        opacity: .8
+        display: flex
+        align-items: center
+        justify-content: space-between
+        cursor: pointer
+        svg
+            width: 25px
+            height: 25px
+            border: 1px solid #d4d4d4
+            border-radius: 50%
+            padding: 5px
+            transform: rotate(180deg)
+
+    &__content
+        max-height: 0
+        visibility: hidden
+        opacity: 0
+        margin-bottom: 0
+        transition: .3s
+    &__bottom
+        font-size: 14px
+        display: flex
+        align-items: flex-end
+        flex-flow: wrap
+        justify-content: space-between
+        max-height: 0
+        visibility: hidden
+        opacity: 0
+        transition: .3s
+        .btn
+            text-transform: uppercase
+
+    em
+        color: #ed2b1b
+
+    &.open
+        .result-item__head
+            svg
+                transform: rotate(0)
+        .result-item__content
+            margin: 24px 0
+        .result-item__content, .result-item__bottom
+            max-height: 1000px
+            visibility: visible
+            opacity: 1
+
+.results-wrapper
+    .btn-more
+        display: flex
+        align-items: center
+        justify-content: center
+        gap: 20px
+        text-transform: uppercase
+        width: 100%
+        background: #fff
+        color: #c00
+        padding: 15px
+        border: 1px solid #c00
+        svg
+            width: 20px
+            height: 20px
+        &:hover
+            color: #fff
+.summary__list
+    .extended-input
+        padding-right: 30px
+        position: relative
+        flex-flow: wrap
+        font-weight: 500
+        display: block
+
+    .extended-input__select.ss-main
+        width: auto
+        display: inline-flex
+
+
+    .extended-input__icon
+        transform: translateY(2px)
+        margin-left: 5px
+
+    .extended-input__label
+        font-weight: 400
+        margin-right: 5px
+        margin-left: 0

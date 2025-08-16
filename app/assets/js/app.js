@@ -96,3 +96,17 @@ document.querySelectorAll('.file-upload-wrapper').forEach((wrapper) => {
     fileNameText.textContent = file ? `${file.name}` : 'Файл не выбран'
   })
 })
+
+
+function resultsToggle() {
+    let allItems = document.querySelectorAll('.result-item')
+
+    allItems.forEach(item => {
+        let toggle = item.querySelector('.result-item__head')
+        toggle.addEventListener('click', () => {
+            item.classList.toggle('open')
+        })
+    })
+}
+
+resultsToggle()

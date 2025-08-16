@@ -20,6 +20,7 @@
     "sass": "^1.45.1"
   },
   "dependencies": {
-    "gulp-sourcemaps": "^3.0.0"
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-svg-sprite": "^2.0.3"
   }
 }

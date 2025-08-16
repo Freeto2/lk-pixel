@@ -5,6 +5,7 @@ var gulp       = require('gulp'); // Подключаем Gulp
     njkRender = require('gulp-nunjucks-render'),
     prettify = require('gulp-html-prettify'),
     sourcemaps = require('gulp-sourcemaps'),
+    svgSprite = require('gulp-svg-sprite'),
     autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
 
     
@@ -36,6 +37,21 @@ gulp.task('scripts', function() {
         // .pipe(uglify()) // Сжимаем JS файл
         .pipe(gulp.dest('app/assets/js')); // Выгружаем в папку app/js
 });
+
+
+gulp.task('svgSprite', function () {
+    return gulp.src('app/assets/img/sprite/*.svg') // svg files for sprite
+        .pipe(svgSprite({
+                mode: {
+                    stack: {
+                        sprite: "../sprite.svg"  //sprite file name
+                    }
+                },
+            }
+        ))
+        .pipe(gulp.dest('app/assets/img/'));
+});
+
     
 gulp.task('code', function() {
     return gulp.src('app/*.html')
@@ -96,7 +112,8 @@ gulp.task('watch', function() {
     gulp.watch('app/njk/**/*.njk', gulp.parallel('layout')); // Наблюдение за njk файлами
     gulp.watch('app/*.html', gulp.parallel('code')); // Наблюдение за HTML файлами в корне проекта
     gulp.watch('app/njk/**/*', gulp.parallel('nunjucks')); // Компиляция шаблонов njk
-    gulp.watch([''], gulp.parallel('scripts')); // Наблюдение за главным JS файлом и за библиотеками
+    gulp.watch('app/assets/img/sprite/*', gulp.parallel('svgSprite')); // Компиляция шаблонов njk
+    gulp.watch('app/assets/libs/**/*.js', gulp.parallel('scripts'));
     gulp.watch('app/assets/js/**/*.js', gulp.parallel('js'));
 });
 gulp.task('default', gulp.parallel('sass', 'js', 'scripts', 'browser-sync', 'nunjucks', 'watch'));
