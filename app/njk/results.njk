@@ -1,0 +1,77 @@
+{% set title = "Результаты поиска" %}
+{% include "./app/njk/parts/header.njk" %}
+
+
+<section class="client-added-wrapper">
+	<div class="container">
+        <div class="search-form results-wrapper">
+            <h1 class="title-block text-center margin-bottom-small">
+                Поиск по расчетам
+            </h1>
+
+            <p class="text-center margin-bottom">
+                Найдите нужный расчет
+            </p>
+
+            <form>
+                <label class="label-search">
+                    <svg><use xlink:href="./assets/img/sprite.svg#search"></use></svg>
+                    <input class="input" type="text" placeholder="Укажите номер расчета...">
+                </label>
+                <div class="text-right">
+                    <button class="toggle-search">
+                        расширенный поиск
+                    </button>
+                </div>
+                
+            </form>
+        </div>
+
+	</div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="results-wrapper">
+            <h2 class="title-block text-center margin-bottom-small">
+                Результаты поиска
+            </h1>
+
+            <p class="text-center margin-bottom">
+                Результаты поиска по запросу «00014»
+            </p>
+            {% for i in range(1, 5) %}
+            <div class="result-item open">
+                <div class="result-item__head">
+                    карточка расчета
+                    <div class="result-item__toggle">
+                        <svg><use xlink:href="./assets/img/sprite.svg#arrow"></use></svg>
+                    </div>
+                    
+                </div>
+                <div class="result-item__content">
+                    <h3 class="title-block margin-bottom-small">
+                        Расчет №<em>00014</em>52{{i}}
+                    </h3>
+                    <p>Наименование показываемого расчета</p>
+                </div>
+                <div class="result-item__bottom">
+                    <button class="btn">
+                        перейти в расчет
+                    </button>
+                    <p>Последнее изменение: <em>16 декабря 2024, 23:53:22</em></p>
+                </div>
+                
+            </div>
+            {% endfor %}
+
+            <button class="btn btn-border btn-more">
+                <svg><use xlink:href="./assets/img/sprite.svg#loading"></use></svg>
+                загрузить больше
+            </button>
+
+        </div>
+    </div>
+</section>
+
+{% include "./app/njk/parts/footer.njk" %}

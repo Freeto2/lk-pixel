@@ -474,6 +474,9 @@ hr:last-child {
 
 .label-password {
   position: relative;
+}
+.label-password [type=password] ~ .btn-toggle-pass svg:nth-child(2),
+.label-password [type=text] ~ .btn-toggle-pass svg:first-child {
   display: none;
 }
 .label-password .btn-toggle-pass {
