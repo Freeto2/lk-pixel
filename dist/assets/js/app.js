@@ -143,16 +143,6 @@ document.querySelector(".add-access").addEventListener("click", function() {
   const firstForm = container.querySelector(".details-element__grid-element");
   const newForm = firstForm.cloneNode(true);
 
-  // Очистка всех полей
-  newForm.querySelectorAll("input, textarea").forEach(el => {
-    el.value = "";
-    if (el.type === "password") {
-        el.type = "password"; // пароль всегда скрыт по умолчанию
-    }
-  });
-
-  newForm.querySelector("h3").innerText = "Новый доступ";
-
   // Добавляем форму ПЕРЕД кнопкой "Добавить доступ"
   container.insertBefore(newForm, document.querySelector("#access-button"));
 
