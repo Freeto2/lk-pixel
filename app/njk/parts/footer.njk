@@ -10,13 +10,17 @@
     {% endif %}
 </div>
 
+{% include '../layout/delete.njk' %}
+{% include '../layout/invoicing.njk' %}
 {% include '../layout/create.njk' %}
 {% include '../layout/loading.njk' %}
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="./assets/js/app.js"></script>
+
 <script src="./assets/js/vendor.min.js"></script>
 <script src="./assets/js/main.min.js"></script>
+
+<script src="./assets/js/app.js"></script>
 
 <svg style="position: absolute; width: 0px; height: 0px;" id="svg-sprite"
     xmlns="http://www.w3.org/2000/svg" xmlns:link="http://www.w3.org/1999/xlink">

@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="./assets/css/grid.css">
 	<link rel="stylesheet" href="./assets/css/main.css"> 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./assets/css/style.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
   </head>
   <body>
     <div class="wrapper">
@@ -256,6 +256,105 @@
     
 </div>
 
+<div class="modal-wrapper" id="delete">
+    <div class="modal-wrapper__inner">
+        <div class="modal-head">
+            <div class="modal-title">
+                Удалить счет
+            </div>
+            <div class="close">
+                Свернуть
+            </div>
+        </div>
+
+        <p class="margin-bottom "><em>Вы уверены, что хотите удалить счет "powerenergysystems.com Август 2025 (Задача 5)"?</em></p>
+
+        <label class="textarea">
+            <span class="textarea__label">Укажите причину удаления</span>
+            <textarea class="textarea__input" rows="5"></textarea>
+        </label>
+
+        <div class="btns-row">
+            <button class="btn close btn--light btn-big">
+                Нет
+            </button>
+            <button class="btn  btn-big">
+                Удалить
+            </button>
+        </div>
+
+    </div>
+    
+</div>
+
+<div class="modal-wrapper" id="invoicing">
+    <div class="modal-wrapper__inner">
+        <div class="modal-head">
+            <div class="modal-title">
+                Создание счета безналичной оплаты
+            </div>
+            <div class="close">
+                Свернуть
+            </div>
+        </div>
+
+        <p class="margin-bottom">Клиент 2chesshmao.ru</p>
+        <label class="label-field">
+            <span>Тип счета</span>
+            <div class="label-select">
+                <select>
+                    <option value="Выберите..." disabled selected>Тип счета</option>
+                    <option value="Выберите...">Договор</option>
+                    <option value="Выберите...">Договор 2</option>
+                </select>
+                <svg><use xlink:href="#arrow"></use></svg>
+            </div>
+        </label>
+
+        <label class="label-field">
+            <span>Документ основание*</span>
+            <div class="label-select">
+                <select>
+                    <option value="Выберите..." disabled selected>Документ основание</option>
+                    <option value="Выберите...">Договор</option>
+                    <option value="Выберите...">Договор 2</option>
+                </select>
+                <svg><use xlink:href="#arrow"></use></svg>
+            </div>
+        </label>
+
+        <label class="label-field">
+            <span>Тип услуги</span>
+            <div class="label-select">
+                <select>
+                    <option value="Выберите..." disabled selected>Тип услуги</option>
+                    <option value="Выберите...">Поддержка сайта</option>
+                    <option value="Выберите...">Создание сайта</option>
+                </select>
+                <svg><use xlink:href="#arrow"></use></svg>
+            </div>
+        </label>
+
+        <label class="text-input details-element__input">
+            <span class="text-input__label">Сумма счета</span>
+            <input class="text-input__input" type="text" name="total_invoice">
+        </label>
+
+        
+        <label class="input-check">
+            <input type="checkbox">
+            <span>разработка 87 000 рублей  </span>
+        </label>
+
+        <div class="text-center">
+            <button class="btn  btn-big">
+                Создать счет
+            </button>
+        </div>
+
+    </div>
+    
+</div>
 <div class="modal-wrapper" id="create">
     <div class="modal-wrapper__inner">
         <div class="modal-head">
@@ -383,9 +482,11 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="./assets/js/app.js"></script>
+
 <script src="./assets/js/vendor.min.js"></script>
 <script src="./assets/js/main.min.js"></script>
+
+<script src="./assets/js/app.js"></script>
 
 <svg style="position: absolute; width: 0px; height: 0px;" id="svg-sprite"
     xmlns="http://www.w3.org/2000/svg" xmlns:link="http://www.w3.org/1999/xlink">

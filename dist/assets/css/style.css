@@ -2751,8 +2751,8 @@ button,
 }
 
 .details-element__block--border-bottom {
-  padding-bottom: 40px;
-  border-bottom: 1px solid #dcdcdc;
+  /* padding-bottom: 40px;
+  border-bottom: 1px solid #dcdcdc; */
 }
 
 .details-element__block-header {

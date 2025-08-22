@@ -1123,4 +1123,40 @@ hr:last-child {
   margin-right: 5px;
   margin-left: 0;
 }
+
+.disabled {
+  pointer-events: none;
+}
+
+#invoicing .modal-wrapper__inner, #delete .modal-wrapper__inner {
+  max-width: 550px;
+}
+#invoicing .modal-wrapper__inner .close, #delete .modal-wrapper__inner .close {
+  margin-left: auto;
+}
+#invoicing .modal-wrapper__inner .btn-big, #delete .modal-wrapper__inner .btn-big {
+  margin-top: 30px;
+}
+
+#delete .modal-wrapper__inner em {
+  color: var(--red);
+  font-weight: bold;
+}
+#delete .modal-wrapper__inner .textarea:not(:last-child) {
+  margin-bottom: 0;
+}
+#delete .modal-wrapper__inner .btns-row {
+  display: flex;
+  gap: 20px;
+  flex-flow: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+#delete .modal-wrapper__inner .btns-row .btn {
+  text-decoration: none;
+  margin: 0;
+}
+#delete .modal-wrapper__inner .btns-row .btn--light {
+  color: var(--red);
+}
 /*# sourceMappingURL=main.css.map */

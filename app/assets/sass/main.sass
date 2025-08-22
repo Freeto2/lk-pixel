@@ -635,3 +635,37 @@ hr
         font-weight: 400
         margin-right: 5px
         margin-left: 0
+
+.disabled
+    pointer-events: none
+
+#invoicing .modal-wrapper__inner, #delete .modal-wrapper__inner
+    max-width: 550px
+
+    .close
+        margin-left: auto
+
+    .btn-big
+        margin-top: 30px
+
+
+#delete .modal-wrapper__inner
+    em
+        color: var(--red)
+        font-weight: bold
+
+    .textarea:not(:last-child)
+        margin-bottom: 0
+
+    .btns-row
+        display: flex
+        gap: 20px
+        flex-flow: wrap
+        justify-content: center
+        margin-top: 30px
+        .btn
+            text-decoration: none
+            margin: 0
+
+            &--light
+                color: var(--red)
