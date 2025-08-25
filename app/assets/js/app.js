@@ -138,14 +138,16 @@ function initPasswordToggle(form) {
 // Инициализация для первой формы
 initPasswordToggle(document.querySelector(".details-element__grid-element"));
 
-document.querySelector(".add-access").addEventListener("click", function() {
-  const container = document.getElementById("access-forms");
-  const firstForm = container.querySelector(".details-element__grid-element");
-  const newForm = firstForm.cloneNode(true);
+if (document.querySelector(".add-access")) {
+    document.querySelector(".add-access").addEventListener("click", function () {
+        const container = document.getElementById("access-forms");
+        const firstForm = container.querySelector(".details-element__grid-element");
+        const newForm = firstForm.cloneNode(true);
 
-  // Добавляем форму ПЕРЕД кнопкой "Добавить доступ"
-  container.insertBefore(newForm, document.querySelector("#access-button"));
+        // Добавляем форму ПЕРЕД кнопкой "Добавить доступ"
+        container.insertBefore(newForm, document.querySelector("#access-button"));
 
-  // Подключаем переключение пароля для новой формы
-  initPasswordToggle(newForm);
-});
+        // Подключаем переключение пароля для новой формы
+        initPasswordToggle(newForm);
+    });
+}
