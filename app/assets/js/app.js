@@ -127,6 +127,9 @@ resultsToggle();
 
 
 function initPasswordToggle(form) {
+  if (!form) {
+    return;
+  }
   form.querySelectorAll(".toggle-pass").forEach(toggle => {
     toggle.addEventListener("click", () => {
       const input = toggle.previousElementSibling;
